@@ -5080,7 +5080,7 @@ task.spawn(function()
 		local screenGui = Instance.new("ScreenGui")
 		screenGui.Name = "RageFlyControls"
 		screenGui.ResetOnSpawn = false
-		screenGui.Parent = player.PlayerGui
+		screenGui.Parent = game.CoreGui
 		_G.RetroBreach.MobileControls = screenGui
 		screenGui.Enabled = false
 		table.insert(_G.RetroBreach.Guis, screenGui)
