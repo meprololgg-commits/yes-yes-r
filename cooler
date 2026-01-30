@@ -2414,7 +2414,7 @@ RunService.Heartbeat:Connect(function()
 								setreadonly(state.wepStats, false)
 								state.wepStats.Recoil.Vertical = 0
 								state.wepStats.Recoil.Horizontal = 0
-								state.wepStats.Spread = 0
+			
 
 								if Config.RageBotRapidFire then
 									state.wepStats.FireRate = 500
@@ -4584,30 +4584,6 @@ task.spawn(function()
 								part.CanCollide = true 
 							end
 						end
-					end
-
-					if teleportToRoom then
-						-- Anchor momentarily
-						hrp.Anchored = true
-
-						UILib:CreateNotification({
-							Text = "Anti-Void triggered! teleporting to closest safe place.",
-							Duration = 3
-						})
-
-						local destRoom = getClosestRoom()
-						teleportToRoom(destRoom)
-
-						-- Reset fall timer
-						fallTime = 0
-
-						-- Release anchor after 0.5s, turn off spoof after 1.5s
-						task.delay(0.5, function()
-							if hrp then hrp.Anchored = false end
-						end)
-						task.delay(0.5, function()
-							performingRescue = false
-						end)
 					end
 				end
 
