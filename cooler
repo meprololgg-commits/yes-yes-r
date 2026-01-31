@@ -4530,7 +4530,7 @@ task.spawn(function()
 			end
 		end
 
-		-- Void Check and Rescue
+		--[[  Void Check and Rescue
 		local char = LocalPlayer.Character
 		if char then
 			local hrp = char:FindFirstChild("HumanoidRootPart")
@@ -4593,7 +4593,7 @@ task.spawn(function()
 					hrp.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
 				end
 			end
-		end
+		end]]--
 	end)
 end)
 
