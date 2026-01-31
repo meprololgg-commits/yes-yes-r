@@ -2412,10 +2412,6 @@ RunService.Heartbeat:Connect(function()
 						if state.wepStats then
 							pcall(function()
 								setreadonly(state.wepStats, false)
-								state.wepStats.Recoil.Vertical = 0
-								state.wepStats.Recoil.Horizontal = 0
-			
-
 								if Config.RageBotRapidFire then
 									state.wepStats.FireRate = 500
 								end
